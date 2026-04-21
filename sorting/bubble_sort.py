@@ -1,0 +1,17 @@
+# Bubble Sort
+# Time complexity: O(n²)
+# Space complexity: O(1)
+
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n - i - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    return arr
+
+# Test
+if __name__ == "__main__":
+    test = [64, 34, 25, 12, 22, 11, 90]
+    print("Original:", test)
+    print("Sorted:  ", bubble_sort(test))
